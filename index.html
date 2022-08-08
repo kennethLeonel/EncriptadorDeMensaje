@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="grid">
+        <header>
+            <div class="cabecera">
+                <h2>Encriptador</h2>
+              <a href="index.html"><img src="/public/img/detective.png" alt="Logo" class="logodetective"></a>  
+            </div>
+
+        </header>
+      
+        <section id="encriptador">
+            <h3>Encriptador Mensajes</h3>
+            <form action="" id="form1"> 
+                <label for="encriptador">Texto a encriptar:</label>
+                <input type="text" name="encriptador" id="encriptador" placeholder="Digite palabra" class="encriptador">
+
+            </form>
+            <button  onclick="encriptar()" >Encriptar</button>
+            <button  onclick="desencriptar()">Desencriptar</button>
+        </section>
+        <section id="mensajes">
+            <h3>Historial Mensajes</h3>
+            <img src="/public/img/MuñecoimagenMensajeNo.svg" alt="no Hay Texto"  class="imagenHistorial">
+            <form action="" id="form2">
+                <label for="historial"> Guardados :</label>
+                <!-- <input type="text" name="historial" class="historial" id ="historial"> -->
+                <textarea name="historial" id="historial" cols="30" rows="10" class="historial" placeholder="No hay registros"> </textarea>
+            </form>
+        
+            <button  onclick="limpiar()" >Limpiar</button>
+            <button  onclick="copiar()">copiar</button>
+            <p id="mirar"></p>
+        </section>
+  
+        <footer>
+            <div >
+                <p>&copy; 2022 - Encriptador</p>    
+            </div>
+        </footer>
+    </main>
+    <script src="public/javascript/app.js"></script>
+</body>
+</html>

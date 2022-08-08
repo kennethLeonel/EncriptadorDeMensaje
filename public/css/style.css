@@ -1,0 +1,90 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-areas: "header header header header"
+                         "encriptador encriptador mensajes mensajes"
+                         "encriptador encriptador mensajes mensajes"
+                         "footer footer footer footer";
+                         gap : 5px;
+}
+
+.grid > header {
+    grid-area: header;
+   
+    padding: 10px;
+    text-align: center;
+}
+.grid > section#encriptador{
+    grid-area: encriptador;
+    background-color: #f2f2f2;  
+    padding: 10px;
+    text-align: center;
+}
+.grid > section#mensajes    {
+    grid-area: mensajes;
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+}
+.grid > footer {
+    grid-area: footer;
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+}
+
+.cabecera{
+    display: flex;
+    justify-content: initial;
+    align-items: center;
+}
+.cabecera h2{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.logodetective{
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+.imagenHistorial{
+    width: 400px;
+    height: 200px;
+    margin-top: 10px;
+}
+/* .historial{
+   background-color: #f2f2f2;
+   border: 1px solid #ccc;
+   
+
+  } */
+  #mensajes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #form2 textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: auto;
+    background-color: #f2f2f2;  
+    text-decoration: none;
+   
+  }
+
+  #mirar{
+    color: green;
+  }
+  
