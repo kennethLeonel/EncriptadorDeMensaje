@@ -34,7 +34,9 @@ function encriptar() {
 
         }
     }); 
-    arreglo.push(concatenacion);
+    if (concatenacion !=" "){
+        arreglo.push(concatenacion);
+    }
     document.getElementById("historial").value = arreglo;
     // var historialMensajes = document.getElementsByClassName("historial");
     // historialMensajes.setAttribute("value",arreglo);
@@ -49,25 +51,42 @@ function desencriptar(){
     for (let i = 0; i < divi.length; i++) {
         if (divi[i] == "o") {
             concatenacion = concatenacion + divi[i];
-            i = i + 3;
+            // i = i + 3;
+            if ((divi[i+1] == "b") && (divi[i+2] == "e") && (divi[i+3] == "r")) {
+                i = i + 3;
+            }
         }else if (divi[i] == "u") {
+            
             concatenacion = concatenacion + divi[i];
+            if((divi[i+1] == "f") && (divi[i+2] == "a") && (divi[i+3] == "t")){
             i = i + 3;
+            }
         }else if (divi[i] == "i") {
             concatenacion = concatenacion + divi[i];
+            if((divi[i+1] == "m") && (divi[i+2] == "e") && (divi[i+3] == "s")){
             i = i + 3;
+            }
         }else if (divi[i] == "e") {
             concatenacion = concatenacion + divi[i];
-            i = i + 4;
+            if ((divi[i+1] == "n") && (divi[i+2] == "t") && (divi[i+3] == "e") && (divi[i+4] == "r")) {
+                i = i + 4;
+            }
+         
         }else if (divi[i] == "a") {
             concatenacion = concatenacion + divi[i];
-            i = i + 1;
+            if ((divi[i+1] == "i")) {
+                i = i + 1;
+            }
         }
         else {
             concatenacion = concatenacion + divi[i];
         }
     }
-    arreglo.push(concatenacion);
+    if (concatenacion !=" "){
+        arreglo.push(concatenacion);
+    }
+
+    
     document.getElementById("historial").value = arreglo;
     document.getElementById("form1").reset();
 
