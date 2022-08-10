@@ -11,26 +11,27 @@ body{
                          "encriptador encriptador mensajes mensajes"
                          "encriptador encriptador mensajes mensajes"
                          "footer footer footer footer";
-                         gap : 5px;
+                         
 }
 
 .grid > header {
     grid-area: header;
-   
+    background-color: #f2f2f2;
     padding: 10px;
     text-align: center;
 }
 .grid > section#encriptador{
     grid-area: encriptador;
-    background-color: #f2f2f2;  
+   
     padding: 10px;
     text-align: center;
 }
 .grid > section#mensajes    {
     grid-area: mensajes;
-    background-color: #f2f2f2;
+ 
     padding: 10px;
     text-align: center;
+    flex-direction: column;
 }
 .grid > footer {
     grid-area: footer;
@@ -58,7 +59,19 @@ body{
     width: 400px;
     height: 200px;
     margin-top: 10px;
+    animation-name: mover;
+    animation-duration        : 2s;
+    animation-iteration-count : infinite;
 }
+@keyframes mover{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+}
+
 /* .historial{
    background-color: #f2f2f2;
    border: 1px solid #ccc;
@@ -87,4 +100,48 @@ body{
   #mirar{
     color: green;
   }
-  
+  .contenedorRedes{
+    margin-top: 10px;
+  }
+  .redes{
+    color: #c57d56;
+   margin: 20px;
+   text-decoration: none;
+  }
+
+  .redes i {
+    transition: 1s all;
+  }
+  .redes i:hover{
+    transform: scale(0.92);
+    color: #933d0f;
+  }
+  .encriptador{
+    width: 400px;
+    height: 200px;
+    background: none;
+    border: none;
+  }
+  .principalBotones{
+    margin-top: 15px;
+    margin-left: 50px;
+
+  }
+  .botones button{
+    background-color: #c57d56;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 1s all;
+  }
+    .botones button:hover{
+        background-color: #fff;
+        color: #c57d56;
+    }
+
+

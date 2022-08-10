@@ -8,8 +8,9 @@
     <link rel="shortcut icon" href="resources/img/detective.png" type="image/x-icon">
     <link rel="stylesheet" href="resources/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c9d22b43b9.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
     <main class="grid">
@@ -28,27 +29,44 @@
                 <input type="text" name="encriptador" id="encriptador" placeholder="Digite palabra" class="encriptador">
 
             </form>
-            <button  onclick="encriptar()" >Encriptar</button>
-            <button  onclick="desencriptar()">Desencriptar</button>
+            <div class="botones principalBotones">
+                <button  onclick="encriptar()" >Encriptar</button>
+                <button  onclick="desencriptar()">Desencriptar</button>
+            </div>
+
         </section>
         <section id="mensajes">
-            <h3>Historial Mensajes</h3>
-            <img src="resources/img/imgMensaje.svg" alt="no Hay Texto"  class="imagenHistorial">
+            <h3 id="histoH3">Sin Mensajes</h3>
+            <img src="resources/img/imgMensaje.svg" alt="no Hay Texto"  id="imgMensaje" class="imagenHistorial">
             <form action="" id="form2">
                 <label for="historial"> Guardados :</label>
                 <!-- <input type="text" name="historial" class="historial" id ="historial"> -->
                 <textarea name="historial" id="historial" cols="30" rows="10" class="historial" placeholder="No hay registros"> </textarea>
             </form>
-        
-            <button  onclick="limpiar()" >Limpiar</button>
-            <button  onclick="copiar()">copiar</button>
-            <p id="mirar"></p>
+            <div class="botones ">
+                <button  onclick="limpiar()" >Limpiar</button>
+                <button  onclick="copiar()">copiar</button>
+                <p id="mirar"></p>
+            </div>
+
         </section>
   
         <footer>
             <div >
                 <p>&copy; 2022 - Encriptador</p>    
-            </div>  
+            </div> 
+            <div>
+                <p>Desarrollado por: <strong> Kenneth Leonel</strong ></p>
+            </div> 
+                            
+            <div class="contenedorRedes">
+                <a href="https://www.linkedin.com/in/kenneth-david-leonel-triana-4920b5162/" class="redes"> 
+                    <i class="fa-brands fa-linkedin-in fa-3x"></i>
+                </a> 
+                <a href="https://github.com/kennethLeonel" class="redes">
+                    <i class="fa-brands fa-github fa-3x"></i>
+                </a>
+            </div>
         </footer>
     </main>
     <script src="resources/javascript/app.js"></script>

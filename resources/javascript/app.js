@@ -1,6 +1,6 @@
 
 let arreglo =[];
-
+limpiar();
 function encriptar() {
     let texto = document.getElementsByClassName("encriptador")[0].value;
     texto = texto.toLowerCase(); 
@@ -35,6 +35,11 @@ function encriptar() {
         }
     }); 
     if (concatenacion !=" "){
+        let imagen = document.getElementById("imgMensaje");
+        imagen.src = "../resources/img/detectiveEncriptado.png";
+        imagen.style.width = "200px";
+        let titulo = document.getElementById("histoH3");
+        titulo.innerHTML = "Historial de mensajes";
         arreglo.push(concatenacion);
     }
     document.getElementById("historial").value = arreglo;
@@ -84,6 +89,11 @@ function desencriptar(){
     }
     if (concatenacion !=" "){
         arreglo.push(concatenacion);
+        let imagen = document.getElementById("imgMensaje");
+        imagen.src = "../resources/img/detectiveEncriptado.png";
+        imagen.style.width = "200px";
+        let titulo = document.getElementById("histoH3");
+        titulo.innerHTML = "Historial de mensajes";
     }
 
     
@@ -94,14 +104,13 @@ function desencriptar(){
 
 function copiar(){
     let copyText =   document.getElementById("historial");
-        /* Select the text field */
+       
         copyText.select();
-        copyText.setSelectionRange(0, 99999); /* For mobile devices */
-        /* Copy the text inside the text field */
+        copyText.setSelectionRange(0, 99999); 
         navigator.clipboard.writeText(copyText.value);
         document.getElementById("mirar").innerHTML = "Mensaje copiado";
 
-        //Mirar como dejar el 
+    //Mirar texto copiado
     setTimeout(function(){
         document.getElementById("mirar").innerHTML = "";
     }, 3000);
@@ -114,10 +123,13 @@ function copiar(){
 
 function limpiar(){
       document.getElementById("historial").value = "";
+      let imagen = document.getElementById("imgMensaje");
+      imagen.src = "../resources/img/imgMensaje.svg";
+      imagen.style.width = "200px";
+      let titulo = document.getElementById("histoH3");
+      titulo.innerHTML = "Sin Mensajes";
       arreglo = [];
-    
-   
-    
+
 }
     // var encriptado = CryptoJS.AES.encrypt(texto, "secret key 123");
     // return encriptado.toString();
