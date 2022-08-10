@@ -36,7 +36,7 @@ function encriptar() {
     }); 
     if (concatenacion !=" "){
         let imagen = document.getElementById("imgMensaje");
-        imagen.src = "../resources/img/detectiveEncriptado.png"; 
+        imagen.src = ".../resources/img/detectiveEncriptado.png"; 
         imagen.style.width = "200px";
         let titulo = document.getElementById("histoH3");
         titulo.innerHTML = "Historial de mensajes";
@@ -90,7 +90,7 @@ function desencriptar(){
     if (concatenacion !=" "){
         arreglo.push(concatenacion);
         let imagen = document.getElementById("imgMensaje");
-        imagen.src = "../resources/img/detectiveEncriptado.png";
+        imagen.src = ".../resources/img/detectiveEncriptado.png";
         imagen.style.width = "200px";
         let titulo = document.getElementById("histoH3");
         titulo.innerHTML = "Historial de mensajes";
@@ -124,7 +124,7 @@ function copiar(){
 function limpiar(){
       document.getElementById("historial").value = "";
       let imagen = document.getElementById("imgMensaje");
-      imagen.src = "../resources/img/imgMensaje.svg"; 
+      imagen.src = ".../resources/img/imgMensaje.svg"; 
       imagen.style.width = "200px";
       let titulo = document.getElementById("histoH3");
       titulo.innerHTML = "Sin Mensajes";
