@@ -7,7 +7,8 @@ function encriptar() {
         alert("Ingrese un mensaje");
         resetearFormulario();
     } else {
-        texto = texto.toLowerCase(); 
+        texto = texto.toLowerCase();
+        texto = removeAccents(texto);
         var concatenacion = "";
         texto.split("").forEach(function (letra){
             switch (letra) {
@@ -54,6 +55,7 @@ function desencriptar(){
         resetearFormulario();
     }else{
         texto = texto.toLowerCase(); 
+        texto = removeAccents(texto);
         var concatenacion = "";
         divi = texto.split("");
         for (let i = 0; i < divi.length; i++) {
@@ -139,6 +141,11 @@ function cambiarImagen(){
     let titulo = document.getElementById("histoH3");
     titulo.innerHTML = "Historial de mensajes";
 }
+
+const removeAccents = (str) => {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  }
+
     // var encriptado = CryptoJS.AES.encrypt(texto, "secret key 123");
     // return encriptado.toString();
 
