@@ -148,6 +148,9 @@
   .encriptador::placeholder {
     color: #933d0f;
   }
+  .encriptador:focus{
+    outline: none;
+  }
 
   .principalBotones{
     margin-top: 10px;
