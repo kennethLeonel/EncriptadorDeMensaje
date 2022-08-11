@@ -56,6 +56,11 @@
     font-size: 1.5em;
     font-weight: bold;
     margin-left: 10px;
+    color: #933d0f;
+   
+}
+.subt{
+  color: #933d0f;
 }
 .logodetective{
     width: 100px;
@@ -85,11 +90,13 @@
    
 
   } */
+
   #mensajes{
     display: flex;
     justify-content: center;
     align-items: center;
   }
+  
   #form2 textarea {
     width: 80%;
     padding: 12px 20px;
@@ -101,9 +108,15 @@
     height: auto;
     background-color: #f2f2f2;  
     text-decoration: none;
-   
+    color: #933d0f;
+    font-size: 16px;
   }
-
+  #form1{
+    margin-top: 15px;
+  }
+  #form2 textarea::placeholder {
+    color: #933d0f;
+  }
   #mirar{
     color: green;
   }
@@ -128,7 +141,14 @@
     height: 200px;
     background: none;
     border: none;
+    color: #933d0f;
+    font-size: 16px;
+  
   }
+  .encriptador::placeholder {
+    color: #933d0f;
+  }
+
   .principalBotones{
     margin-top: 10px;
     margin-right: 40px;
